@@ -98,7 +98,7 @@ namespace DateTimeUnitTest.NUnit_Lab3
         [Test]
         public void CheckDate_UTCID21()
         {
-            bool result = DateValidator.IsValidDate(0, 0, 1000);
+            bool result = DateValidator.IsValidDate(0, 0, 2000);
             Assert.IsFalse(result);
         }
     }
