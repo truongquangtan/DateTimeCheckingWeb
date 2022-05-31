@@ -15,7 +15,7 @@ namespace DateTimeCheckingWeb.Models
         public string? Month { get; set; }
         [Required]
         [RequiredNumberFormat(ErrorMessage = "Input for year is not a number")]
-        [RequiredInRange(1000, 4000, ErrorMessage = "Input for year is out of range")]
+        [RequiredInRange(1000, 3000, ErrorMessage = "Input for year is out of range")]
         public string? Year { get; set; }
         public string? Message { get; set; }
     }

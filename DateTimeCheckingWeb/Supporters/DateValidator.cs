@@ -23,7 +23,7 @@ namespace DateTimeCheckingWeb.Supporters
 
         public static int DaysInMonth(int year, int month)
         {
-            if (year <= 0) return 0;
+            if (year < 1000 || year > 3000) return 0;
             if(month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
             {
                 return 31;
