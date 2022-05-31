@@ -88,5 +88,27 @@ namespace DateTimeCheckingWeb.Supporters
             }
             return true;
         }
+        public static bool IsValidDate(string day, string month, string year)
+        {
+            int dayNumber, monthNumber, yearNumber;
+            try
+            {
+                dayNumber = int.Parse(day);
+                monthNumber = int.Parse(month);
+                yearNumber = int.Parse(year);
+            } catch (FormatException)
+            {
+                throw;
+            }
+            return IsValidDate(dayNumber, monthNumber, yearNumber);
+        }
+        public static int DaysInMonth(string year, string month)
+        {
+            int yearNumber;
+            int monthNumber;
+            yearNumber = int.Parse(year);
+            monthNumber = int.Parse(month);
+            return DaysInMonth(yearNumber, monthNumber);
+        }
     }
 }
