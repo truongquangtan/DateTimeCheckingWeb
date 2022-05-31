@@ -1,0 +1,43 @@
+﻿@model DateTimeCheckingWeb.Models.DateInputModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+ @{string message = "";}
+ @if(Model != null && Model.Message != null)
+ {
+     message = Model.Message;
+ }
+<div class="text-center form-container">
+    <h1 class="display-4">DateTime Checker</h1>
+    <div class="width-50">
+        <form asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Day" class="control-label"></label>
+                <input asp-for="Day" class="form-control" />
+                <span asp-validation-for="Day" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Month" class="control-label"></label>
+                <input asp-for="Month" class="form-control" />
+                <span asp-validation-for="Month" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Year" class="control-label"></label>
+                <input asp-for="Year" class="form-control" />
+                <span asp-validation-for="Year" class="text-danger"></span>
+            </div>
+            <div class="form-group p-10" id="button-container">
+                <input type="submit" value="Check" class="btn btn-primary" />
+                <input type="button" value="Clear" class="btn btn-primary" onclick="closeInput()" />
+            </div>
+            <script src="~/js/site.js" asp-append-version="true"></script>
+        </form>
+        <input type="text" value="@message" class="text-danger" id="message" readonly/>
+    </div>
+    
+</div>
+
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
