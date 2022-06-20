@@ -5,7 +5,7 @@ using OpenQA.Selenium.Chrome;
 
 namespace SeleniumWebDriver_Demo
 {
-    public class UnitTest1 : IDisposable
+    public class DemoClass : IDisposable
     {
         private IWebDriver driver;
         private string url = "https://localhost:7231";
@@ -19,7 +19,7 @@ namespace SeleniumWebDriver_Demo
         }
 
         [Fact]
-        public void Test1()
+        public void TestDemo_ErrorMessageForDay()
         {
             driver = new ChromeDriver();
             driver.Navigate().GoToUrl(url);
