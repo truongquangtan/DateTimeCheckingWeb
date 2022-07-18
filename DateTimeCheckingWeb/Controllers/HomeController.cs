@@ -31,7 +31,7 @@ namespace DateTimeCheckingWeb.Controllers
                 int month = int.Parse(dateInputModel.Month!);
                 int year = int.Parse(dateInputModel.Year!);
 
-                if(DateValidator.Validate(day, month, year))
+                if(DateValidator.IsValidDate(day, month, year))
                 {
                     dateInputModel.Message = $"{day}/{month}/{year} is valid date";
                 }
